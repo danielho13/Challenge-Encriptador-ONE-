@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="Imagenes/Logo.png" alt="logo de alura">
+    </header>
+    <main>
+        <section class="izq">
+            <textarea class="area__texto" id="area__texto" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="btn__cond">
+                <div class="condiciones">
+                    <img src="Imagenes/bi_exclamation-circle-fill.png" alt="exclamación">
+                    <h6 class="info">Solo letras minúsculas y sin acentos</h6>
+                </div>
+                <div class="botones">
+                    <button class="boton__encriptar" id="boton__Encriptar" type="button">Encriptar</button>
+                    <button class="boton__desencriptar" id="botonDesencriptar" type="button">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <section class="der">
+            <div class="textos_derecha">
+                <img id="muneco" class="muneco" src="Imagenes/Muñeco.png" alt="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.">
+                <textarea id="mensaje" class="mensaje" placeholder="Ningún mensaje fue encontrado"></textarea>
+                <p id="textoInfo" class="info">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <button class="copiar" id="botonCopiar">Copiar</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <footer class="footer">
+        <p>By Daniel Hoyos Berrio | <a href="https://github.com/danielho13" target="_blank">GitHub | <a href="https://www.linkedin.com/in/daniel-hoyos-berr%C3%ADo-9649b3211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a></p>
+    </footer>
+    
+</body>
+</html>

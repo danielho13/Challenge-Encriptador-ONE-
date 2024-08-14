@@ -1,0 +1,318 @@
+/* CSS General */
+* {
+    background: #F3F5FC;
+    font-family: Inter;
+    
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.logo {
+    padding: 40px;
+    margin-left: 40px;
+    width: 160px;
+    height: 64px;
+}
+
+main {
+    margin: auto 40px auto auto;
+    width: 90%;
+    align-items: end;
+    min-height: calc(100vh - 80px - 56px);
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1rem;
+}
+
+/* Lado izquierdo */
+.izq {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.area__texto {
+    border: none;
+    height: calc(100% - 120px); 
+    color: #0A3871;
+    background: transparent;
+    outline: none;
+    resize: none;
+    padding-left: 120px;
+    margin-left: 120px;
+    font-size: 32px;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.area__texto:focus {
+    outline: none;
+}
+
+.btn__cond {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.condiciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 120px;
+    margin-left: 120px;
+}
+
+.info {
+    text-align: center;
+    font-size: 12px;
+    color: #495057;
+    background: transparent;
+}
+
+.botones {
+    display: flex;
+    margin-top: 18px;
+    padding-left: 120px;
+    margin-left: 120px;
+    gap: 8px;
+}
+
+.boton__desencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+    text-align: center;
+}
+
+.boton__encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    text-align: center;
+}
+
+/* Lado derecho */
+.der {
+    align-items: center;
+    width: 362px;
+    height: calc(100% + 60px);
+    background: white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    padding-bottom: 33px;
+    gap: 24px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.muneco {
+    margin-top: 40%;
+    min-width: 230px;
+    width: 50%;
+    background: transparent;
+}
+
+.mensaje {
+    background: #FFFFFF;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 32px;
+    font-size: 24px;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    text-align: center;
+    font-size: 32px;
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.mensaje::placeholder {
+    color: #343A40;
+}
+
+.textos_derecha {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+}
+
+.copiar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    text-align: center;
+    height: 67px;
+    width: 328px;
+    display: none;
+}
+
+.footer {
+
+    background-color: #F3F5FC; 
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px; 
+    color: #0A3871;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer a {
+    color: #0A3871;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+/* Responsividad */
+@media screen and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .logo {
+        width: 140px;
+        height: 56px;
+        margin-left: 20px;
+    }
+    .izq .area__texto, .izq .condiciones, .izq .botones {
+        padding-left: 40px;
+        margin-left: 0;
+    }
+    .botones {
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .der {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+    }
+    .muneco {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .logo {
+        width: 120px;
+        height: 48px;
+        margin-left: 10px;
+    }
+    .der {
+        gap: 16px;
+    }
+    .izq {
+        gap: 8px;
+    }
+    .area__texto {
+        margin-top: 20px;
+        padding-left: 20px;
+        margin-left: 0;
+        width: calc(100% - 40px); 
+    }
+    .botones {
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-left: 0;
+    }
+    .footer {
+        font-size: 8px;
+        padding: 8px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .logo {
+        width: 100px;
+        height: 40px;
+    }
+    .area__texto {
+        margin-top: 10px;
+        padding-left: 20px;
+        margin-left: 0;
+        width: calc(100% - 40px);
+    }
+    .condiciones {
+        padding-left: 20px;
+        margin-left: 0;
+    }
+    .botones {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 8px;
+        margin-left: 0;
+    }
+    .info {
+        font-size: 10px;
+    }
+    .der {
+        gap: 8px;
+    }
+    .muneco {
+        display: none !important;
+    }
+    .copiar {
+        width: 100%; 
+    }
+    .textos_derecha {
+        gap: 8px;
+    }
+    .mensaje {
+        margin-bottom: 8px; 
+    }
+    .condiciones img {
+        width: 20px;
+        height: 20px;
+    }
+    .boton__desencriptar{
+        margin-left: -0.8%;
+    }
+    .footer {
+        font-size: 8px;
+        padding: 5px 0;
+    }
+}
