@@ -30,7 +30,17 @@ const ejecucion = (valorNuevo) => {
     areaTexto.value = "";
 };
 
+const verificarTextarea = () => {
+    if (areaTexto.value.trim() === "") {
+        alert("No se ha escrito ningún texto para encriptar");
+        return false;
+    }
+    return true;
+};
+
 botonEncriptar.addEventListener("click", () => {
+    if (!verificarTextarea()) return; // Verifica si el textarea está vacío
+
     let texto = areaTexto.value.toLowerCase();
 
     function encriptar(texto) {
@@ -46,6 +56,8 @@ botonEncriptar.addEventListener("click", () => {
 });
 
 botonDesencriptar.addEventListener("click", () => {
+    if (!verificarTextarea()) return; // Verifica si el textarea está vacío
+
     let texto = areaTexto.value.toLowerCase();
 
     function desencriptar(texto) {
@@ -86,3 +98,4 @@ window.addEventListener('resize', () => {
         muneco.style.display = "block";
     }
 });
+
