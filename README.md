@@ -31,7 +31,7 @@ El proyecto cuenta con una interfaz amigable y funcional, diseñada para uso int
 ---
 
 ## **Vista Previa**
-![Pantalla de Inicio](Imagenes/Pantalla_Inicio.png)
+![Pantalla de Inicio](assets/Pantalla_Inicio.png)
 
 ---
 
